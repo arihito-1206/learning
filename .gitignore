@@ -1,0 +1,14 @@
+# .NET
+bin/
+obj/
+
+# SQLite
+*.db
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.DotSettings.user

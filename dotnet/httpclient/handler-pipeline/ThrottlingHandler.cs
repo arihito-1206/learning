@@ -11,7 +11,10 @@ public class ThrottlingHandler : DelegatingHandler
         Console.WriteLine("ロックを取得");
         try
         {
-            return await base.SendAsync(request, cancellationToken);
+            var response = await base.SendAsync(request, cancellationToken);
+            Console.WriteLine($"ThrottlingHandler が受け取った: {response.StatusCode}");
+
+            return response;
         }
         finally
         {

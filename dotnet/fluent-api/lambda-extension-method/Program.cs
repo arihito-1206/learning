@@ -10,7 +10,7 @@ doubleAction(5);
 // 拡張メソッドの練習
 Console.WriteLine(5.Double());
 Console.WriteLine(5.Apply(x => x * x));
-
+Console.WriteLine(5.Double().Apply(x => x * x));
 internal static class IntExtensions
 {
     public static int Double(this int i) => i * 2;

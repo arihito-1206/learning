@@ -17,7 +17,10 @@ Console.WriteLine("5.Double().Apply(x => x * x) の結果: {0}", 5.Double().Appl
 var options = new Options();
 var builder = new Builder(options);
 builder.Configure(opt => opt.Value = 500);
+var result = builder.BuildWith(b => b.CreateResult());
+
 Console.WriteLine("option.Value = " + options.Value);
+Console.WriteLine("result.Value = " + result.Value);
 
 internal static class IntExtensions
 {

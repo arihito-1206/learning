@@ -11,4 +11,13 @@ internal class Builder(Options options)
     {
         configure(options);
     }
+
+    internal Result BuildWith(Func<Builder, Result> factory) => factory(this);
+
+    internal Result CreateResult() => new() { Value = options.Value };
+}
+
+internal class Result
+{
+    internal int Value { get; set; }
 }

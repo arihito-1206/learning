@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿DelegateFunc doubleFunc = x => 2 * x;
+
+Console.WriteLine($"{doubleFunc(5)}");
+
+internal delegate int DelegateFunc(int x);
